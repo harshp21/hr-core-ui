@@ -1,0 +1,65 @@
+/* Keep global CSS intentionally minimal because MUI CssBaseline handles resets. */
+:root {
+  --selection-bg: #0057b8;
+  --selection-fg: #fff;
+  --scrollbar-size: 0.5rem;
+  --scrollbar-track-bg: #f5f5f5;
+  --scrollbar-thumb-bg: #e0e0e0;
+  --scrollbar-thumb-hover-bg: #bdbdbd;
+  --scrollbar-radius: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-fg);
+}
+
+::-moz-selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-fg);
+}
+
+::-webkit-scrollbar {
+  width: var(--scrollbar-size);
+  height: var(--scrollbar-size);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-bg);
+  border-radius: var(--scrollbar-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover-bg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
